@@ -10,37 +10,26 @@
 
 {% block content %}
 	Умное прогнозирование закупок
-
-	<table>
-		<tr>
-			<td width="10%">Посещаемость в <br> 2017-2018 году</td>
-			<td><img src="{{ url_for("static", filename="attendance_2017-2018.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Продажи в <br> 2017-2018 году</td>
-			<td><img src="{{ url_for("static", filename="sales_2017-2018.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Коэффициенты <br> продаж в <br> 2017-2018 году</td>
-			<td><img src="{{ url_for("static", filename="ratio.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Прогнозируемая посещаемость в <br> 2018-2019 году</td>
-			<td><img src="{{ url_for("static", filename="prediction_attendance.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Прогнозируемые продажи в <br> 2018-2019 году</td>
-			<td><img src="{{ url_for("static", filename="prediction_sales.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Прогнозируемая выручка в <br> 2018-2019 году</td>
-			<td><img src="{{ url_for("static", filename="prediction_revenue.png") }}" width="100%"></td>
-		</tr>
-		<tr>
-			<td>Прогнозируемая выручка в <br> сравнении с выручкой <br> 2017-2018 года</td>
-			<td><img src="{{ url_for("static", filename="compare_revenue.png") }}" width="100%"></td>
-		</tr>
-	</table>
+	<form action="/", method="post">
+		<p>Выберите годовой график или отчёт по прогнозу:</p>
+		<p>
+			<select name="Select">
+				<option value="2007">2007</option>
+				<option value="2008">2008</option>
+				<option value="2009">2009</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+				<option value="2016">2016</option>
+				<option value="2017">2017</option>
+				<option value="Прогноз">Прогноз</option>
+			</select>
+		</p>
+		<p><input type="submit" value="Продолжить"></p>
+	</form>
 <br>
 <footer>
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
